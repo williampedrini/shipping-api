@@ -1,0 +1,14 @@
+[
+  {
+    "supplier": "SupplierA",
+    "product": "hoodie",
+    "amount": "1",
+    "deliveryTime": 1
+  },
+  {
+    "supplier": "SupplierA",
+    "product": "blue_t-shirt",
+    "amount": "1",
+    "deliveryTime": 1
+  }
+]

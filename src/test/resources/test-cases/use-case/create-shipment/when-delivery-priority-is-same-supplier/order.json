@@ -1,0 +1,13 @@
+{
+  "region": "eu",
+  "items": [
+    {
+      "productName": "hoodie",
+      "amount": "1"
+    },
+    {
+      "productName": "blue_t-shirt",
+      "amount": "1"
+    }
+  ]
+}
