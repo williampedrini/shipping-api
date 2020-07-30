@@ -1,8 +1,8 @@
-package com.moteefe.shipping.util;
+package com.moteefe.shipping.usecase;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.moteefe.shipping.domain.entity.SupplierProduct;
-import com.moteefe.shipping.usecase.FindSupplierProduct;
+import com.moteefe.shipping.util.JSONUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

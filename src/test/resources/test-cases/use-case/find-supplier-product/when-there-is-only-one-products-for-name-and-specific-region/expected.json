@@ -1,0 +1,14 @@
+[
+    {
+        "supplier": {
+            "id": "1",
+            "name": "SupplierA"
+        },
+        "product": {
+            "id": "1",
+            "name": "tshirt"
+        },
+        "deliveryTimes": "{\"eu\": 1}",
+        "inStock": 10
+    }
+]

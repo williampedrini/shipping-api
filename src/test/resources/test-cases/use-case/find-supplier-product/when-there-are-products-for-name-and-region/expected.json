@@ -1,0 +1,28 @@
+[
+    {
+        "id": "1",
+        "supplier": {
+            "id": "1",
+            "name": "SupplierA"
+        },
+        "product": {
+            "id": "1",
+            "name": "tshirt"
+        },
+        "deliveryTimes": "{\"eu\": 1}",
+        "inStock": 10
+    },
+    {
+        "id": "2",
+        "supplier": {
+            "id": "2",
+            "name": "SupplierB"
+        },
+        "product": {
+            "id": "1",
+            "name": "tshirt"
+        },
+        "deliveryTimes": "{\"eu\": 1}",
+        "inStock": 2
+    }
+]
