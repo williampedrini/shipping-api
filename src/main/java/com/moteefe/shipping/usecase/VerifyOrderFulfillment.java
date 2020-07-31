@@ -22,7 +22,7 @@ public final class VerifyOrderFulfillment {
     /**
      * Performs verifications against a certain order item information.
      * @param possibleShipmentItems All the possible shipment items found to support the order.
-     * @throws IllegalStateException If any requirement was fulfilled.
+     * @throws OrderNotFulfilledException If any requirement was fulfilled.
      */
     public void verify(@NotNull final Collection<ShipmentItem> possibleShipmentItems) {
         final var shipmentItemsByProduct = possibleShipmentItems
@@ -40,7 +40,7 @@ public final class VerifyOrderFulfillment {
      *
      * @param possibleShipmentItems All the possible shipment items found to support the order item.
      * @param orderItem             The order item containing the information of the desired amount.
-     * @throws IllegalStateException If the amount was not fulfilled.
+     * @throws OrderNotFulfilledException If the amount was not fulfilled.
      */
     private void verifyIfOrderItemAmountWasFulfilled(final Collection<ShipmentItem> possibleShipmentItems, final OrderItem orderItem) {
         final var totalPossibleShipmentAmount = ofNullable(possibleShipmentItems)
