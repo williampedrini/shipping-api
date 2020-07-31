@@ -25,7 +25,7 @@ import static org.junit.Assert.assertTrue;
 })
 @RunWith(SpringRunner.class)
 @Transactional
-public class FindSupplierProductIntegrationTest {
+public class FindSupplierProductTest {
 
     private static final String TEST_CASES_BASE_PATH = "/test-cases/use-case/find-supplier-product/%s";
 
