@@ -2,7 +2,6 @@ FROM adoptopenjdk/openjdk11:slim
 MAINTAINER "Moteefe"
 
 ENV PORT 8080
-ENV CLASSPATH /opt/lib
 EXPOSE 8080
 
 COPY target/shipping-api.jar /opt/application.jar
