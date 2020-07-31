@@ -18,7 +18,7 @@ public class VerifyOrderFulfillmentTest {
     private static final String TEST_CASES_BASE_PATH = "/test-cases/use-case/verify-order-fulfillment/%s";
 
     @Test
-    public void testWhenThereIsAOrderItemWithMissingAmount_shouldThrowAnIllegalStateException() {
+    public void testWhenThereIsAOrderItemWithMissingAmount_shouldThrowAnOrderNotFulfilledException() {
         //then
         assertThrows(OrderNotFulfilledException.class, () -> {
             //when
