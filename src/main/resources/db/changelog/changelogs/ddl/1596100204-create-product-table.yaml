@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1596100204-create-product-table
+      author: williamcustodio
+      changes:
+        - createTable:
+            tableName: product
+            remarks: "Table containing a catalog with all existing products."
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  remarks: "Product's unique identifier."
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(255)
+                  remarks: "Product's unique name."
+                  constraints:
+                    nullable: false
+                    unique: true

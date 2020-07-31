@@ -1,0 +1,62 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1596100260-create-supplier-product-table
+      author: williamcustodio
+      changes:
+        - createTable:
+            tableName: supplier_product
+            remarks: "Table containing a definition of a supplier's product."
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  remarks: "Supplier product's unique identifier."
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: supplier_id
+                  type: int
+                  remarks: "Supplier's unique identifier owner of the product."
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_id
+                  type: int
+                  remarks: "Product's unique identifier."
+                  constraints:
+                    nullable: false
+              - column:
+                  name: delivery_times
+                  type: clob
+                  remarks: "The amount of time to delivery by region as JSON format."
+                  constraints:
+                    nullable: false
+              - column:
+                  name: in_stock
+                  type: int
+                  remarks: "The amount of products in stock for a certain supplier."
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseColumnNames: supplier_id
+            baseTableName: supplier_product
+            constraintName: supplier_product_supplier_fk
+            onDelete: CASCADE
+            referencedColumnNames: id
+            referencedTableName: supplier
+            validate: true
+        - addForeignKeyConstraint:
+            baseColumnNames: product_id
+            baseTableName: supplier_product
+            constraintName: supplier_product_product_fk
+            onDelete: CASCADE
+            referencedColumnNames: id
+            referencedTableName: product
+            validate: true
+        - addUniqueConstraint:
+            columnNames:  supplier_id, product_id
+            constraintName:  supplier_product_uk
+            tableName:  supplier_product
+            validate:  true

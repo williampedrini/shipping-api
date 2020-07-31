@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1596100245-create-supplier-table
+      author: williamcustodio
+      changes:
+        - createTable:
+            tableName: supplier
+            remarks: "Table containing a catalog with all existing suppliers."
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  remarks: "Supplier's unique identifier."
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(255)
+                  remarks: "Supplier's unique name."
+                  constraints:
+                    nullable: false
+                    unique: true

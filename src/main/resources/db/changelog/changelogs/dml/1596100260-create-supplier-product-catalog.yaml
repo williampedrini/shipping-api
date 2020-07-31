@@ -1,0 +1,95 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1596100260-create-supplier-product-catalog
+      author: williamcustodio
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name:  supplier_id
+                  valueComputed: (select id from supplier where name = 'Shirts4U')
+              - column:
+                  name:  product_id
+                  valueComputed: (select id from product p where name = 'black_mug')
+              - column:
+                  name:  delivery_times
+                  value: '{"eu": 1, "us": 6, "uk": 2}'
+              - column:
+                  name:  in_stock
+                  value: 3
+            tableName:  supplier_product
+        - insert:
+            columns:
+              - column:
+                  name:  supplier_id
+                  valueComputed: (select id from supplier s where name = 'Best Tshirts')
+              - column:
+                  name:  product_id
+                  valueComputed: (select id from product p where name = 'blue_t-shirt')
+              - column:
+                  name:  delivery_times
+                  value: '{"eu": 1, "us": 5, "uk": 2}'
+              - column:
+                  name:  in_stock
+                  value: 10
+            tableName:  supplier_product
+        - insert:
+            columns:
+              - column:
+                  name:  supplier_id
+                  valueComputed: (select id from supplier s where name = 'Shirts Unlimited')
+              - column:
+                  name:  product_id
+                  valueComputed: (select id from product p where name = 'white_mug')
+              - column:
+                  name:  delivery_times
+                  value: '{"eu": 1, "us": 8, "uk": 2}'
+              - column:
+                  name:  in_stock
+                  value: 3
+            tableName:  supplier_product
+        - insert:
+            columns:
+              - column:
+                  name:  supplier_id
+                  valueComputed: (select id from supplier s where name = 'Shirts Unlimited')
+              - column:
+                  name:  product_id
+                  valueComputed: (select id from product p where name = 'black_mug')
+              - column:
+                  name:  delivery_times
+                  value: '{"eu": 1, "us": 7, "uk": 2}'
+              - column:
+                  name:  in_stock
+                  value: 4
+            tableName:  supplier_product
+        - insert:
+            columns:
+              - column:
+                  name:  supplier_id
+                  valueComputed: (select id from supplier s where name = 'Shirts4U')
+              - column:
+                  name:  product_id
+                  valueComputed: (select id from product p where name = 'pink_t-shirt')
+              - column:
+                  name:  delivery_times
+                  value: '{"eu": 1, "us": 6, "uk": 2}'
+              - column:
+                  name:  in_stock
+                  value: 8
+            tableName:  supplier_product
+        - insert:
+            columns:
+              - column:
+                  name:  supplier_id
+                  valueComputed: (select id from supplier s where name = 'Best Tshirts')
+              - column:
+                  name:  product_id
+                  valueComputed: (select p.id from product p where p.name = 'pink_t-shirt')
+              - column:
+                  name:  delivery_times
+                  value: '{"eu": 1, "us": 3, "uk": 2}'
+              - column:
+                  name:  in_stock
+                  value: 2
+            tableName:  supplier_product

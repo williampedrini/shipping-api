@@ -17,19 +17,26 @@
     <properties>
         <java.version>11</java.version>
         <lombko.version>1.18.12</lombko.version>
-        <springfox-swagger.version>2.9.2</springfox-swagger.version>
         <jakarta.validation.version>2.0.2</jakarta.validation.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombko.version}</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
         </dependency>
         <dependency>
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombko.version}</version>
         </dependency>
 
         <dependency>

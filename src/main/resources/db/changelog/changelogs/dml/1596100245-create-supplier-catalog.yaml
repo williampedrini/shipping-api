@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1596100245-create-supplier-catalog
+      author: williamcustodio
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name:  name
+                  value:  Shirts4U
+            tableName:  supplier
+        - insert:
+            columns:
+              - column:
+                  name:  name
+                  value:  Best Tshirts
+            tableName:  supplier
+        - insert:
+            columns:
+              - column:
+                  name:  name
+                  value:  Shirts Unlimited
+            tableName:  supplier

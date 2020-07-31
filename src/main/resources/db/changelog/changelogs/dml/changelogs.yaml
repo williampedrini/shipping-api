@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changelogs/dml/1596100204-create-product-catalog.yaml
+  - include:
+      file: db/changelog/changelogs/dml/1596100245-create-supplier-catalog.yaml
+  - include:
+      file: db/changelog/changelogs/dml/1596100260-create-supplier-product-catalog.yaml

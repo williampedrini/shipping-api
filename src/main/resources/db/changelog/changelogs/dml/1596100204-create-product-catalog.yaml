@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1596100204-create-product-catalog
+      author: williamcustodio
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name:  name
+                  value:  black_mug
+            tableName:  product
+        - insert:
+            columns:
+              - column:
+                  name:  name
+                  value:  blue_t-shirt
+            tableName:  product
+        - insert:
+            columns:
+              - column:
+                  name:  name
+                  value:  white_mug
+            tableName:  product
+        - insert:
+            columns:
+              - column:
+                  name:  name
+                  value:  pink_t-shirt
+            tableName:  product
