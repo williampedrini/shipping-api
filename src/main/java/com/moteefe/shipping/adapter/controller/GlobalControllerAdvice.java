@@ -14,7 +14,7 @@ import static java.util.stream.Collectors.toUnmodifiableList;
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
 @Slf4j
-@RestControllerAdvice("com.moteefe.delivery.api.adapter.controller")
+@RestControllerAdvice("com.moteefe.shipping.adapter.controller")
 class GlobalControllerAdvice {
 
     @ResponseStatus(BAD_REQUEST)
