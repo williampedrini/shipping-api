@@ -28,7 +28,7 @@ class OrderController {
 
     @PostMapping
     @ApiResponses({
-            @ApiResponse(code = 202, message = "The order was successfully accepted.", response = OrderResponseDTO.class),
+            @ApiResponse(code = 200, message = "The order was successfully accepted.", response = OrderResponseDTO.class),
             @ApiResponse(code = 400, message = "Error while performing pre-validations against the order creation.", response = ErrorResponseDTO.class)
     })
     OrderResponseDTO create(
