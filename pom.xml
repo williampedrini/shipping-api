@@ -15,6 +15,7 @@
     <packaging>jar</packaging>
 
     <properties>
+        <artifact.name>shipping-api</artifact.name>
         <jakarta.validation.version>2.0.2</jakarta.validation.version>
         <java.version>11</java.version>
         <lombko.version>1.18.12</lombko.version>
@@ -78,6 +79,17 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>repackage</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>${artifact.name}</finalName>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
