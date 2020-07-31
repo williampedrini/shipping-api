@@ -19,7 +19,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 @SpringBootTest(properties = {
-        "spring.datasource.url=jdbc:h2:mem:delivery;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL",
+        "spring.datasource.url=jdbc:h2:mem:shipping;MODE=MySQL",
         "spring.datasource.driverClassName=org.h2.Driver",
         "spring.liquibase.enabled=false"
 })
