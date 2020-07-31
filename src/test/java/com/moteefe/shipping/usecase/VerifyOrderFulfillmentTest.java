@@ -31,7 +31,7 @@ public class VerifyOrderFulfillmentTest {
     }
 
     @Test
-    public void testWhenTheOrderWasFulfilled_shouldNotThrowAnIllegalStateException() {
+    public void testWhenTheOrderWasFulfilled_shouldNotThrowAnOrderNotFulfilledException() {
         //when
         final var orderFullPath = format(TEST_CASES_BASE_PATH, "when-there-is-not-missing-amount/order.json");
         final var order = fileToBean(orderFullPath, Order.class);
