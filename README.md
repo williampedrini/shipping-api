@@ -42,3 +42,10 @@ To run the API execute the following command inside of the root folder:
 ```
  mvn spring-boot:run
 ```
+
+## Running Tests
+
+#### SwaggerUI
+
+1. Access the [swagger document](http://localhost:8080/swagger-ui.html).
+2. Perform tests using the defined requests.
