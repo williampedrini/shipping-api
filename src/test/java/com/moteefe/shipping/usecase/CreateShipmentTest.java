@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.moteefe.shipping.domain.entity.Order;
 import com.moteefe.shipping.domain.entity.Shipment;
 import com.moteefe.shipping.domain.entity.ShipmentItem;
+import com.moteefe.shipping.usecase.exception.OrderNotFulfilledException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +13,13 @@ import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collections;
 import java.util.List;
 
 import static com.moteefe.shipping.util.JSONUtil.fileToBean;
 import static java.lang.String.format;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 @SpringBootTest(properties = {
         "spring.datasource.url=jdbc:h2:mem:shipping;MODE=MySQL",
@@ -48,6 +51,19 @@ public class CreateShipmentTest {
     @Sql("classpath:test-cases/use-case/create-shipment/when-delivery-demand-is-shared-by-suppliers/insert.sql")
     public void testWhenSupplierAAndSupplierBFulfillDemandTogether_shouldReturnBothSuppliers() {
         test("when-delivery-demand-is-shared-by-suppliers");
+    }
+
+    @Test
+    public void testWhenThereIsAOrderItemWithMissingAmount_shouldThrowAnIllegalStateException() {
+        //then
+        assertThrows(OrderNotFulfilledException.class, () -> {
+            //when
+            final var orderFullPath = format(TEST_CASES_BASE_PATH, "when-there-is-missing-amount/order.json");
+            final var order = fileToBean(orderFullPath, Order.class);
+
+            final var possibleShipmentItems = Collections.<ShipmentItem>emptyList();
+            new VerifyOrderFulfillment(order).verify(possibleShipmentItems);
+        });
     }
 
     private void test(final String testResourcePath) {

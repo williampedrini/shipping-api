@@ -1,0 +1,9 @@
+{
+  "region": "eu",
+  "items": [
+    {
+      "productName": "ProductA",
+      "amount": "1"
+    }
+  ]
+}
