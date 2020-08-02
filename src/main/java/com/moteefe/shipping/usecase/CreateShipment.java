@@ -104,7 +104,7 @@ public final class CreateShipment {
      */
     private int getAmountOfProductsForShipment(final int amountInStock, final int desiredAmount) {
         final var productsInStockAfterShipment = amountInStock - desiredAmount;
-        return productsInStockAfterShipment < 0 ? amountInStock % desiredAmount : desiredAmount;
+        return productsInStockAfterShipment < 0 ? amountInStock : desiredAmount;
     }
 
     /**
