@@ -2,7 +2,39 @@
 
 This project contains the representation of an api responsible for performing actions related to deliveries.
 
-#### PREREQUISITES
+## RUNNING IN DOCKER 
+
+These instructions will get you the project up and running on a Docker container for testing purposes.
+
+It will download the application image from [docker registry](https://hub.docker.com/r/williamcustodio/shipping-api) and configure the database.
+
+### PREREQUISITES
+
+What things you need to run the application:
+
+```
+Docker
+```
+
+#### INSTALLING
+
+##### DOCKER
+
+Download the [wizard](https://docs.docker.com/get-docker/) and follow the instructions to install it.
+
+### RUNNING
+
+Run the application with the following command inside of the [root folder](.):
+
+```
+ docker-compose up
+```
+
+## RUNNING IN DEVELOPMENT MODE
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### PREREQUISITES
 
 What things you need to install the software and how to install them:
 
@@ -11,6 +43,7 @@ Java 11
 Maven 3.6.3
 Docker
 ```
+#### INSTALLING
 
 Install the tool for managing parallel versions of multiple Software Development Kits [SDK MAN](https://sdkman.io/install).
 
@@ -30,19 +63,11 @@ Execute the following command:
 sdk install maven 3.6.3
 ```
 
-### RUNNING IN DOCKER 
+##### DOCKER
 
-These instructions will get you a copy of the project up and running on Docker for testing purposes.
+Download the [wizard](https://docs.docker.com/get-docker/) and follow the instructions to install it.
 
-Run the API execute the following command inside of the root folder:
-
-```
- docker-compose up
-```
-
-### RUNNING IN DEVELOPMENT MODE
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+### RUNNING
 
 Create an instance of MySQL using the following command:
 
@@ -56,9 +81,9 @@ Run the API execute the following command inside of the root folder:
  mvn spring-boot:run -Dspring-boot.run.jvmArguments="-DDATA_SOURCE_URL=jdbc:mysql://localhost:3306/<database_name> -DDATA_SOURCE_USERNAME=<username> -DDATA_SOURCE_PASSWORD=<password>"
 ```
 
-### RUNNING TESTS
+## RUNNING TESTS
 
-#### SwaggerUI
+### SwaggerUI
 
-1. Access the [swagger document](http://localhost:8080/swagger-ui.html).
+1. Access the [api documentation](http://localhost:8080/swagger-ui.html).
 2. Perform tests using the defined requests.

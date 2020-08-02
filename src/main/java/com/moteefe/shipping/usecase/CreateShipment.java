@@ -13,15 +13,8 @@ import org.springframework.stereotype.Component;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
 
-import static java.util.Optional.ofNullable;
-import static java.util.stream.Collectors.groupingBy;
-import static java.util.stream.Collectors.toSet;
 import static java.util.stream.Collectors.toUnmodifiableList;
 
 /**
@@ -104,7 +97,7 @@ public final class CreateShipment {
      */
     private int getAmountOfProductsForShipment(final int amountInStock, final int desiredAmount) {
         final var productsInStockAfterShipment = amountInStock - desiredAmount;
-        return productsInStockAfterShipment < 0 ? amountInStock % desiredAmount : desiredAmount;
+        return productsInStockAfterShipment < 0 ? amountInStock : desiredAmount;
     }
 
     /**
