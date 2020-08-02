@@ -1,10 +1,10 @@
 # SHIPPING API
 
-This project contains the representation of an api responsible for performing actions related to deliveries.
+This project contains the representation of an API responsible for performing actions related to deliveries.
 
 ## RUNNING IN DOCKER 
 
-These instructions will get you the project up and running on a Docker container for testing purposes.
+These instructions will get you the project up and running in a Docker container for testing purposes.
 
 It will download the application image from [docker registry](https://hub.docker.com/r/williamcustodio/shipping-api) and configure the database.
 
@@ -36,7 +36,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### PREREQUISITES
 
-What things you need to install the software and how to install them:
+What things you need to install the application and how to install them:
 
 ```
 Java 11
@@ -75,7 +75,7 @@ Create an instance of MySQL using the following command:
  docker run -e MYSQL_ROOT_PASSWORD=<root_password> -e MYSQL_DATABASE=<database_name> -e MYSQL_USER=<username> -e MYSQL_PASSWORD=<password> -p 3306:3306 mysql
 ```
 
-Run the API execute the following command inside of the root folder:
+Run the application with the following command inside of the [root folder](.):
 
 ```
  mvn spring-boot:run -Dspring-boot.run.jvmArguments="-DDATA_SOURCE_URL=jdbc:mysql://localhost:3306/<database_name> -DDATA_SOURCE_USERNAME=<username> -DDATA_SOURCE_PASSWORD=<password>"
