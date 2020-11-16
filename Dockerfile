@@ -1,5 +1,5 @@
 FROM adoptopenjdk/openjdk11:slim
-MAINTAINER "Moteefe"
+MAINTAINER "William Custodio"
 
 ENV PORT 8080
 EXPOSE 8080

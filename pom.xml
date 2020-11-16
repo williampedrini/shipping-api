@@ -9,7 +9,7 @@
         <version>2.3.2.RELEASE</version>
         <relativePath/>
     </parent>
-    <groupId>com.moteefe</groupId>
+    <groupId>com.custodio</groupId>
     <artifactId>shipping</artifactId>
     <version>1.0.3</version>
     <packaging>jar</packaging>
